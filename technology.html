@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Space tourism website</title>
-  <script defer src="script.js"></script>
+  
 </head>
 <body class="technology">
 
@@ -50,6 +50,51 @@
     </div>
 
   </main>
+     <script defer>
+    var menu = document.getElementsByClassName("menu")[0]
+var close = document.getElementsByClassName("close")[0]
+var nav = document.getElementsByTagName("nav")[0]
 
+menu.addEventListener("click",() => {
+   nav.style.display = "block"
+})
+
+
+close.addEventListener("click",() => {
+    nav.style.display = ""
+ })
+
+ async function getDataTech()
+{
+   var response = await fetch("./data.json")
+   var data = await response.json()
+
+   var Tbuttons = document.getElementsByClassName("techBtn")[0]
+   var Ttitle =  document.getElementsByClassName("Ttitle")[0]
+   var Tdescription = document.getElementsByClassName("Tdescription")[0]
+   var Timg = document.getElementById("Timg")
+    var landscape = document.getElementsByClassName("landscape")[0]
+   for(let i=0 ; i< Tbuttons.children.length ; i++)
+   {
+
+      Tbuttons.children[i].addEventListener("click", (e) => {
+      Array.from(Tbuttons.children).forEach(element => {
+         element.style.backgroundColor = "transparent"
+         element.style.color = "white"
+         })
+
+         e.target.style.backgroundColor = "white"
+         e.target.style.color = "black"
+         Ttitle.innerHTML = data.technology[i].name
+         Tdescription.innerHTML = data.technology[i].description
+         Timg.src = data.technology[i].images.portrait
+         landscape.src = data.technology[i].images.landscape
+   })
+
+   }
+}
+
+getDataTech()
+  </script>
 </body>
 </html>
