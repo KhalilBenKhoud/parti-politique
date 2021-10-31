@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="crew">
@@ -44,5 +44,52 @@
       <img id="Mimg" src="assets/crew/image-douglas-hurley.png" alt="">
     </div>
   </main>
+    <script defer>
+    var menu = document.getElementsByClassName("menu")[0]
+var close = document.getElementsByClassName("close")[0]
+var nav = document.getElementsByTagName("nav")[0]
+
+menu.addEventListener("click",() => {
+   nav.style.display = "block"
+})
+
+
+close.addEventListener("click",() => {
+    nav.style.display = ""
+ })
+   async function getDataCrew()
+{
+   var response = await fetch("./data.json")
+   var data = await response.json()
+
+
+ var buttons = document.getElementsByClassName("buttons")[0]
+ var role =  document.getElementsByClassName("role")[0]
+ var name = document.getElementsByClassName("name")[0]
+ var bio =  document.getElementsByClassName("bio")[0]
+ var memberImg =  document.getElementById("Mimg")
+  
+ for(let i=0 ; i< buttons.children.length ; i++)
+  {
+     buttons.children[i].addEventListener("click", (e) => {
+       console.log("clicked")
+       Array.from(buttons.children).forEach(element => {
+           element.style.backgroundColor = "grey"
+           
+        })
+
+        e.target.style.backgroundColor = "white"
+        role.innerHTML = data.crew[i].role
+        name.innerHTML = data.crew[i].name
+        bio.innerHTML = data.crew[i].bio
+        memberImg.src = data.crew[i].images.png
+     })
+
+  }
+
+}
+
+getDataCrew()
+  </script>
 </body>
 </html>
