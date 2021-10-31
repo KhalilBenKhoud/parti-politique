@@ -17,7 +17,7 @@ close.addEventListener("click",() => {
 
 async function getData()
 {
-   var response = await fetch("data.json")
+   var response = await fetch("../data.json")
    var data = await response.json()
    var links = document.getElementsByClassName("links")[0]
    var title = document.getElementsByClassName("big")[0]
@@ -45,7 +45,7 @@ getData()
 
 async function getDataCrew()
 {
-   var response = await fetch("data.json")
+   var response = await fetch("../data.json")
    var data = await response.json()
 
 
@@ -79,7 +79,7 @@ getDataCrew()
 
 async function getDataTech()
 {
-   var response = await fetch("data.json")
+   var response = await fetch("../data.json")
    var data = await response.json()
 
    var Tbuttons = document.getElementsByClassName("techBtn")[0]
