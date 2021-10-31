@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+
+* , *::before , *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    min-height: 100vh;
+    background-image: url("assets/home/background-home-desktop.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Bellefair';
+    
+}
+
+a {
+    text-decoration: none;
+    color : white ;
+}
+
+header {
+  padding-top: 30px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Barlow Condensed';
+  font-size: 16px;
+  letter-spacing: 2.7;
+  text-transform: uppercase;
+}
+nav {
+    width: 50%;
+    height: 70px;
+    background: rgba(220, 220, 220, 0.301) ;
+    
+    backdrop-filter: blur(45px);
+    display: grid;
+    place-items: center ;
+}
+nav ul {
+    display: flex;
+    gap : 35px ;
+    list-style: none ;
+    
+}
+
+nav ul li a span {
+    font-weight: 1000;
+    font-size: 18px;
+}
+nav ul li a {
+    position: relative;
+    white-space: nowrap;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -120%;
+    left : 50% ;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 0;
+    background-color: white;
+    transition: .6s ease;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.main1 {
+   color : white ;
+   position:absolute;
+   top:160px;
+   right:0px;
+   bottom:0px;
+   left:0px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   font-size: 18px;
+}
+
+.container1 {
+    width: 40%;
+}
+.container1 span {
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.container1 h1 {
+    font-size: 150px;
+}
+
+.large-button {
+    background-color: white;
+    color : black ;
+    font-size: 20px;
+    text-transform: uppercase ;
+    padding: 35px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 8px 10px rgb(255, 255, 255,0.8),
+                0 0 8px 20px rgb(255,255,255,0.3),
+                0 0 8px 30px rgba(141, 135, 135, 0.5);
+
+}
+
+.large-button a {
+    color : black;
+    text-decoration: none;
+}
+.menu ,.close {
+    display: none;
+    cursor: pointer;
+}
+
+.large-button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.452) ;
+    border-radius: 50%;
+    z-index: -5;
+    transition: .6s ease;
+}
+
+.large-button:hover::after {
+    transform: scale(1.5);
+}
+
+.destination {
+    min-height: 100vh;
+    background-image: url("assets/destination/background-destination-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Bellefair';
+    font-size: 18px;
+}
+
+.main2 {
+    width: 70%;
+    margin: auto;
+    margin-top: 35px;
+    display: flex;
+    gap : 150px ;
+    margin-bottom: 50px;
+}
+.container2 h1 {
+    font-family: 'Barlow Condensed';
+    color : white ;
+    text-transform: uppercase;
+    
+}
+.container2 h1 span {
+    color : grey ;
+}
+
+.container2 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap : 40px ;
+}
+
+.container3 {
+    color : white ;
+    display: flex;
+    flex-direction: column;
+    gap: 35px ;
+}
+
+.links {
+    display: flex;
+    gap : 15px ;
+    font-size: 20px ;
+    margin-top: 50px;
+}
+.links > * {
+    cursor: pointer;
+    position: relative;
+}
+.links > *::before {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left : 50% ;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: .6s ease;
+}
+
+.links > *:hover::before {
+    width: 100%;
+}
+
+.big {
+    font-size: 100px;
+}
+
+.distance {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.distance span {
+    font-size: 20px;
+}
+
+.crew {
+    min-height: 100vh;
+    background-image: url("assets/crew/background-crew-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Bellefair';
+    font-size: 18px;
+}
+
+.main3 {
+    display: flex;
+    gap: 50px ;
+    align-items: center;
+    justify-content: space-around;
+    color : white ;
+    margin-left: 200px;
+}
+
+.container5 {
+    height: 500px;
+    width: 40%;
+    margin-top: 22px;
+}
+
+.container5 img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.container4 {
+    display: flex;
+    gap: 80px; 
+    flex-direction: column;
+    width: 40%;
+}
+
+.container4 h1 {
+    font-family: 'Barlow Condensed';
+}
+.container4 h1 span {
+    color : grey ;
+}
+
+.role {
+    color : grey ;
+    font-size: 32px;
+    text-transform: uppercase ;
+}
+
+.name {
+    font-size: 50px;
+}
+.bio {
+    font-size: 22px;
+}
+
+.buttons > * {
+    padding: 5px;
+    border: none;
+    outline : none ;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: grey;
+}
+.buttons > *:hover {
+    background-color: gainsboro;
+}
+.buttons > *:first-child {
+    background-color: white;
+}
+
+.technology {
+    min-height: 100vh;
+    background-image: url("assets/technology/background-technology-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Bellefair';
+    font-size: 18px;
+    
+}
+
+.main4 {
+    display: flex;
+   
+    justify-content: space-between;
+    color : white ;
+}
+.container6 {
+    width: 50%;
+    margin-left: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap : 100px ;
+    margin-bottom: 50px;
+}
+.container6 > h1 {
+    font-family: 'Barlow Condensed';
+    text-transform: uppercase;
+}
+.container6 > h1 span {
+    color : grey ;
+}
+.container7 {
+  
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.container6 article {
+    display: flex;
+    justify-content: space-around;
+}
+.techBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px ;
+}
+.techBtn > * {
+   color: white;
+   background-color: transparent;
+   border: 1px solid gainsboro;
+   padding: 15px;
+   border-radius: 50%;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.techBtn > *:hover {
+    color: black;
+    background-color: white;
+}
+.review {
+    width: 70%;
+    font-size: 20px;
+}
+.review span {
+    font-family: 'Barlow Condensed';
+    text-transform: uppercase;
+}
+.review h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.landscape {
+    display: none;
+}
+@media screen and (max-width : 850px)
+{
+      .home {
+          background-image: url('assets/home/background-home-tablet.jpg');
+          overflow-x: hidden;
+      }
+       .destination {
+           background-image: url("assets/destination/background-destination-tablet.jpg");
+       }
+       .crew {
+           background-image: url("assets/crew/background-crew-tablet.jpg");
+       }
+    .main1 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap : 30px ;
+          
+        }
+      nav {
+          width: 70%;
+      } 
+      .main2 {
+          width: 90%;
+          
+          flex-direction: column;
+          gap : 30px ;
+          align-items: center;
+          justify-content: center;
+
+        }
+        .container2 {
+            width: 60%;
+        }
+        .container3 {
+            justify-content: center;
+           
+        }
+        .container3 > h1 , .container3 > p , .container3 > *:first-child
+        {
+            align-self: center;
+        }
+
+        .main3 {
+            flex-direction: column;
+            margin-left: 0;
+            align-items: center;
+            gap : 10px ;
+        }
+        .container4 {
+            margin-top: 50px;
+            width : 70% ;
+            gap: 10px ;
+        }
+        .container5 {
+            height: 400px;
+        }
+         .technology {
+             background-image: url("assets/technology/background-technology-tablet.jpg");
+             overflow-x: hidden;
+         }
+        .main4 {
+            flex-direction: column ;
+
+        }
+        .container6 {
+            order: 2;
+           width: 90%;
+           gap : 50px ;
+           margin-left : 0;
+           justify-content: center;
+           align-items: center;
+        }
+        article {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap : 30px ;
+        }
+        .techBtn {
+            flex-direction: row;
+        }
+        #Timg{
+           display: none;
+        }
+         .landscape {
+             display : block ;
+         }
+}
+
+
+@media screen and (max-width : 700px)
+{
+    .home {
+        background-image: url("assets/home/background-home-mobile.jpg");
+    }
+    .destination {
+        background-image: url("assets/destination/background-destination-mobile.jpg");
+    }
+    .crew {
+        background-image: url("assets/crew/background-crew-mobile.jpg");
+    }
+    .menu ,.close {
+        display: block;
+        z-index: 5;
+    }
+  
+    nav ul {
+        position: absolute ;
+        top: 0 ;
+        right: 0 ;
+        flex-direction: column;
+        padding: 15px;
+    }
+    header {
+        padding-right: 30px;
+    }
+    nav {
+        position: absolute ;
+        top: 0 ;
+        right: 0 ;
+        height: 100vh;
+        width: 200px;
+        background: grey  ;
+        z-index: 10;
+        display: none;
+    }
+
+    .close {
+        float : right ;
+    }
+
+    .container1 {
+        width: 90%;
+
+        font-size: 18px;
+        text-align: center;
+    }
+    .container1 span {
+        font-size: 16px;
+    }
+    .container1 h1 {
+        font-size: 100px;
+    }
+    .container2 {
+        width: 80%;
+    }
+    
+    .container4 {
+        order: 2;
+    }
+    .container5 {
+        margin-top: 70px;
+        height: 300px;
+    }
+    .container4 h1 {
+        position: absolute;
+        top : 100px ;
+        left : 50% ;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+    .container4 {
+        margin-bottom: 100px;
+    }
+    .info {
+        order : 2;
+    }
+    .technology {
+        background-image: url("assets/technology/background-technology-mobile.jpg");
+    }
+}
