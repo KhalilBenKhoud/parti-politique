@@ -65,7 +65,6 @@ close.addEventListener("click",() => {
 
 
 //destinations
-
 async function getData()
 {
    var response = await fetch("./data.json")
@@ -86,13 +85,10 @@ async function getData()
            travel.children[1].innerText =  data.destinations[i].travel
       })
    }
-
-   //crew data
-
   
 }
-
 getData()
+
   </script>
 </body>
 </html>
