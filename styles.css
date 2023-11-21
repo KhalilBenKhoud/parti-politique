@@ -244,17 +244,21 @@ nav ul li a:hover::after {
     justify-content: space-around;
     color : white ;
     margin-left: 200px;
+    height: 100%;
 }
 
 .container5 {
-    height: 500px;
+    height: 100% ;
     width: 40%;
-    margin-top: 22px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container5 img {
     max-width: 100%;
-    height: 100%;
+    
 }
 
 .container4 {
@@ -326,6 +330,7 @@ nav ul li a:hover::after {
 }
 .container6 {
     width: 100%;
+    height: 100%;
     margin-left: 50px;
     margin-top: 50px;
     display: flex;
@@ -334,6 +339,10 @@ nav ul li a:hover::after {
     align-items: center;
     gap : 100px ;
     margin-bottom: 50px;
+}
+
+.container6 img {
+    height: 100%;
 }
 .flyer {
     
