@@ -10,45 +10,24 @@
   
 </head>
 <body class="technology">
-
   <header>
-    <img src="assets/shared/logo.svg" alt="" class="logo">
+    <img src="assets/shared/logo.png" alt="" class="logo">
     <img src="assets/shared/icon-hamburger.svg" alt="" class="menu">
      <nav>
        <ul>
          <li><img src="assets/shared/icon-close.svg" alt="" class="close"></li>
-         <li><a href="index.html"> <span> 00 </span> Home</a></li>
-         <li><a href="destination.html"><span> 01 </span> Destination</a></li>
-         <li><a href="crew.html"><span> 02 </span> Crew</a></li>
-         <li><a href="technology.html"><span> 03 </span> Technology</a></li>
+         <li><a href="index.html"> <span> 00 </span> &nbsp; Accueil</a></li>
+         <li><a href="destination.html"><span> 01 </span> &nbsp; Programme</a></li>
+         <li><a href="crew.html"><span> 02 </span> &nbsp; Composition</a></li>
+         <li><a href="technology.html"><span> 03 </span> &nbsp; Stratégie</a></li>
        </ul>
      </nav>
   </header>
    
   <main class="main4">
     <div class="container6">
-      <h1><span>03 </span>space launch 101</h1>
-   
-      <article>
-        <div class="techBtn">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-        </div>
-         <div class="review">
-           <span>The terminology ...</span>
-            <h1 class="Ttitle">launch vehicle</h1>
-            <div class="Tdescription">
-              A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad! 
-            </div>
-         </div>
-      </article>
+     <img src="./assets/technology/flyer.jpg" class="flyer" alt="flyer"/>
     </div>
-    <div class="container7">
-      <img id="Timg" src="assets/technology/image-launch-vehicle-portrait.jpg" alt="">
-      <img src="assets/technology/image-launch-vehicle-landscape.jpg" alt="" class="landscape">
-    </div>
-
   </main>
      <script defer>
     var menu = document.getElementsByClassName("menu")[0]
@@ -64,37 +43,9 @@ close.addEventListener("click",() => {
     nav.style.display = ""
  })
 
- async function getDataTech()
-{
-   var response = await fetch("./data.json")
-   var data = await response.json()
+ 
 
-   var Tbuttons = document.getElementsByClassName("techBtn")[0]
-   var Ttitle =  document.getElementsByClassName("Ttitle")[0]
-   var Tdescription = document.getElementsByClassName("Tdescription")[0]
-   var Timg = document.getElementById("Timg")
-    var landscape = document.getElementsByClassName("landscape")[0]
-   for(let i=0 ; i< Tbuttons.children.length ; i++)
-   {
 
-      Tbuttons.children[i].addEventListener("click", (e) => {
-      Array.from(Tbuttons.children).forEach(element => {
-         element.style.backgroundColor = "transparent"
-         element.style.color = "white"
-         })
-
-         e.target.style.backgroundColor = "white"
-         e.target.style.color = "black"
-         Ttitle.innerHTML = data.technology[i].name
-         Tdescription.innerHTML = data.technology[i].description
-         Timg.src = data.technology[i].images.portrait
-         landscape.src = data.technology[i].images.landscape
-   })
-
-   }
-}
-
-getDataTech()
   </script>
 </body>
 </html>

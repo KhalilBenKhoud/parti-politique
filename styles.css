@@ -7,6 +7,12 @@
     box-sizing: border-box;
 }
 
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
 .home {
     min-height: 100vh;
     background-image: url("assets/home/background-home-desktop.jpg") ;
@@ -93,7 +99,8 @@ nav ul li a:hover::after {
     font-size: 22px;
 }
 .container1 h1 {
-    font-size: 150px;
+    font-size: 50px;
+    width: 100%;
 }
 
 .large-button {
@@ -164,6 +171,7 @@ nav ul li a:hover::after {
 }
 .container2 h1 span {
     color : grey ;
+    
 }
 
 .container2 {
@@ -309,13 +317,18 @@ nav ul li a:hover::after {
     color : white ;
 }
 .container6 {
-    width: 50%;
+    width: 100%;
     margin-left: 50px;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap : 100px ;
     margin-bottom: 50px;
+}
+.flyer {
+    
 }
 .container6 > h1 {
     font-family: 'Barlow Condensed';
@@ -368,6 +381,12 @@ nav ul li a:hover::after {
 
 .landscape {
     display: none;
+}
+
+.crewImg {
+    width: 300px;
+    height: 300px !important;
+    border-radius: 20px;
 }
 @media screen and (max-width : 850px)
 {
@@ -425,7 +444,12 @@ nav ul li a:hover::after {
             gap: 10px ;
         }
         .container5 {
-            height: 400px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
         }
          .technology {
              background-image: url("assets/technology/background-technology-tablet.jpg");
